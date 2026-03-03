@@ -16,6 +16,22 @@
       ],
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Bootstrap Dev Device",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/bootstrap-dev.ps1",
+        "-ProjectRoot",
+        "."
+      ],
+      "group": "build",
+      "problemMatcher": []
     }
   ]
 }
