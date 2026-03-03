@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Chat Handover",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/generate-chat-context.ps1",
+        "-OutputFile",
+        "CHAT_CONTEXT_AUTO.md"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
