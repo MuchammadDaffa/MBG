@@ -6,6 +6,37 @@ Base URL (local):
 
 Semua response menggunakan format JSON.
 
+## Authentication
+
+Flow autentikasi menggunakan Laravel Sanctum personal access token.
+
+### Login
+- Method: `POST`
+- URL: `/api/auth/login`
+- Body:
+```json
+{
+  "email": "admin@mbg.local",
+  "password": "password123"
+}
+```
+
+### Me
+- Method: `GET`
+- URL: `/api/auth/me`
+- Header: `Authorization: Bearer {token}`
+
+### Logout
+- Method: `POST`
+- URL: `/api/auth/logout`
+- Header: `Authorization: Bearer {token}`
+
+Catatan:
+- Semua endpoint `/api/v1/*` sekarang wajib token (`auth:sanctum`).
+- Seeder default membuat user admin pusat:
+  - email: `admin@mbg.local`
+  - password: `password123`
+
 ## Health Check
 
 - Method: `GET`
